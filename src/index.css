@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  bottom: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.defaultTheme {
+  background-color: rgba(87, 171, 172, 0.29);
+  color: bisque !important;
+}
+
+.darkTheme {
+  background-color: rgba(105, 55, 55, 0.272);
+  color: chartreuse !important;
+}

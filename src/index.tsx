@@ -1,13 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.scss";
+import { AppRoute } from "./routes/appRoute";
+import { BrowserRouter } from "react-router-dom";
+import { ThemeContextProvider } from "./common/context/themeContext";
+import { AppContextProvider } from "./common/context/appContext";
+import "./index.css";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ThemeContextProvider>
+        <AppContextProvider>
+          <AppRoute />
+        </AppContextProvider>
+      </ThemeContextProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );

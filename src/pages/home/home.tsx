@@ -6,8 +6,8 @@ import { Footer } from "../../common/components/ui/layout/footer/footer";
 export const Home = () => {
   return (
     <div className={styles.container}>
-      <Header />
-      <Footer />
+      {/* <Header /> */}
+      {/* <Footer /> */}
     </div>
   );
 };
