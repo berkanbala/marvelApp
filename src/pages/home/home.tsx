@@ -1,8 +1,20 @@
-import React from "react";
+import { useGetMarvel } from "../../common/hooks/useGetMarvel";
+import { Character } from "../../custom/components/character/character";
 import styles from "./home.module.scss";
-import { Header } from "../../common/components/ui/layout/header/header";
-import { Footer } from "../../common/components/ui/layout/footer/footer";
 
 export const Home = () => {
-  return <div className={styles.container}>rlgöerşlgöş</div>;
+  const { characters, charactersError, charactersLoading } = useGetMarvel();
+
+  if (charactersLoading) return <div>loading...</div>;
+  if (charactersError) return <div>error</div>;
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.content}>
+        {characters?.results?.map((character: any) => (
+          <Character key={character.id} character={character} />
+        ))}
+      </div>
+    </div>
+  );
 };
