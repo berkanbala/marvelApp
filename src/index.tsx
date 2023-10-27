@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { AppRoute } from "./routes/appRoute";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeContextProvider } from "./common/context/themeContext";
-import { AppContextProvider } from "./common/context/appContext";
+import { AppContextProvider } from "./common/context/marvelContext";
 import "./index.css";
 
 const root = ReactDOM.createRoot(

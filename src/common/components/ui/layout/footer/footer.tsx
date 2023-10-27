@@ -1,6 +1,5 @@
-import React from "react";
-import styles from "./footer.module.scss";
 import classNames from "classnames";
+import styles from "./footer.module.scss";
 
 export const Footer = (props: Props) => {
   const { className } = props;

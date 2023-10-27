@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Home } from "../pages/home/home";
 import { CharacterDetails } from "../pages/characterDetails/characterDetails";
 import { NotFound } from "../pages/notfound/notFound";
-import { AppLayout } from "../custom/layout/appLayout";
+import { AppLayout } from "../layout/appLayout";
 
 export const AppRoute = () => {
   return (
