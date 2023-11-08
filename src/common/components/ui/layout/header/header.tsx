@@ -1,7 +1,7 @@
+import { ThemeMarvel } from "../../themeSwitch/themeMarvel";
+import { Link } from "react-router-dom";
 import styles from "./header.module.scss";
 import Marvel from "../../../../media/logo/marvel2.png";
-import { Link } from "react-router-dom";
-import { ThemeMarvel } from "../../themeSwitch/themeMarvel";
 import classNames from "classnames";
 
 export const Header = (props: Props) => {

@@ -1,13 +1,7 @@
 import useSWR from "swr";
 import { marvelClient } from "../clients/marvelClient";
 
-export const useGetMarvelDetails = (
-  id: string
-): {
-  characterDetails: any;
-  characterDetailsLoading: boolean;
-  characterDetailsError: any;
-} => {
+export const useGetMarvelDetails = (id: string) => {
   const marvelApiClient = marvelClient({});
 
   const fetcher = (url: string) =>

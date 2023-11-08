@@ -5,24 +5,26 @@ export const Character = (props: Props) => {
   console.log(character);
   return (
     <div className={styles.container}>
-      <div className="column-images">
+      {/* <div className={styles.images}>
         <img
           src={`${character.thumbnail.path}/portrait_uncanny.${character.thumbnail.extension}`}
           alt="Character Details"
         />
-      </div>
-      <div className="column-heading">{character.name}</div>
-      <div className="column-subheading">{""}</div>
+      </div> */}
+      <div className={styles.heading}>{character?.data?.name}</div>
+      <div className={styles.subheading}>{""}</div>
     </div>
   );
 };
 
 interface Props {
   character: {
-    name: string;
-    thumbnail: {
-      path: string;
-      extension: string;
+    data: {
+      name: string;
+      thumbnail: {
+        path: string;
+        extension: string;
+      };
     };
   };
 }

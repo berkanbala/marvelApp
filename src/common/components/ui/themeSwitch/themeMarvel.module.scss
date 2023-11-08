@@ -13,7 +13,6 @@
   }
 
   .toggleTheme {
-    //checkBoxer
     position: relative;
     display: block;
     height: 23px;
@@ -54,14 +53,6 @@
         width: 17px;
         border-radius: 50%;
       }
-
-      // &.sliderRound {
-      //   border-radius: 20px;
-
-      //   &:before {
-      //     border-radius: 50%;
-      //   }
-      // }
     }
   }
 }

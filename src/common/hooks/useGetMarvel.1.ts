@@ -1,13 +1,18 @@
 import { marvelClient } from "common/clients/marvelClient";
 import useSWR from "swr";
 
-export const useGetMarvel = () => {
-  const fetcher = () =>
+export const useGetMarvel = (): {
+  characters: any;
+  charactersLoading: boolean;
+  charactersError: any;
+} => {
+  const fetcher = (url: any) =>
     marvelClient({ params: "characters" })
-      .get("")
+      .get(url)
       .then((response: any) => response.data);
-
-  const { data, error, isValidating } = useSWR("/", fetcher, {
+  // const shouldFetch = !!marvelClient;
+  // const url = shouldFetch ? "/" : null;
+  const { data, error, isValidating } = useSWR("", fetcher, {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false,

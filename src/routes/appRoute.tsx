@@ -9,21 +9,7 @@ export const AppRoute = () => {
     <Routes>
       <Route element={<AppLayout />}>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/details:id"
-          element={
-            <CharacterDetails
-              character={{
-                id: "",
-                name: "",
-                thumbnail: {
-                  path: "",
-                  extension: "",
-                },
-              }}
-            />
-          }
-        />
+        <Route path="/details/:id" element={<CharacterDetails />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
