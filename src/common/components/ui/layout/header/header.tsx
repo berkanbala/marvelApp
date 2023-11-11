@@ -10,7 +10,7 @@ export const Header = (props: Props) => {
     <div className={classNames(className, styles.container)}>
       <ul>
         <li>
-          <Link to="/">
+          <Link to={"https://www.marvel.com"} target="blank">
             <img alt="" src={Marvel} />
           </Link>
         </li>

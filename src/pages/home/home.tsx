@@ -28,7 +28,6 @@ export const Home = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        {/* aaaaaa */}
         {characters?.results?.map((character: any) => (
           <Character key={character.id} character={character} />
         ))}

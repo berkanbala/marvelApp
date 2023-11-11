@@ -1,3 +1,35 @@
 .container {
-  color: black;
+  .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 30px 0px;
+  }
+
+  .paginate {
+  }
+}
+
+@media (max-width: 1300px) {
+  .container {
+    .content {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    .content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    .content {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
