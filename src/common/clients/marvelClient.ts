@@ -1,6 +1,9 @@
 import axios from "axios";
 
-export const marvelClient = (options?: { token?: string; params?: string }) => {
+export const marvelClient = (
+  options?: { token?: string; params?: string }
+  // offset?: number
+) => {
   if (!process.env.REACT_APP_API_URL)
     console.warn("cannot find appConfig baseUrl");
 
