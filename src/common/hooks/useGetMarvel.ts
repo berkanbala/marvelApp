@@ -3,15 +3,11 @@ import useSWR from "swr";
 
 export const useGetMarvel = () => {
   const fetcher = () =>
-    marvelClient({ params: "characters" })
+    marvelClient()
       .get("")
       .then((response: any) => response.data);
 
-  const { data, error, isValidating } = useSWR("/", fetcher, {
-    revalidateIfStale: false,
-    revalidateOnFocus: false,
-    revalidateOnReconnect: false,
-  });
+  const { data, error, isValidating } = useSWR("/", fetcher, {});
   return {
     characters: data?.data || null,
     charactersLoading: isValidating,

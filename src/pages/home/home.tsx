@@ -1,9 +1,9 @@
-import { getCharacters } from "common/services/home/homeServices";
+import { useGetMarvel } from "common/hooks/useGetMarvel";
 import { Character } from "../../custom/components/character/character";
 import styles from "./home.module.scss";
-import { useEffect } from "react";
-import { useGetMarvel } from "common/hooks/useGetMarvel";
-import { CharacterDetails } from "../characterDetails/characterDetails";
+// import { useEffect } from "react";
+// import { getCharacters } from "common/services/home/homeServices";
+// import { CharacterDetails } from "../characterDetails/characterDetails";
 
 export const Home = () => {
   const { characters, charactersLoading, charactersError } = useGetMarvel();

@@ -6,7 +6,7 @@ export const Character = (props: Props) => {
   const { character } = props;
   console.log(character);
 
-  const handleClick = (id: number) => navigate(`details/${id}`);
+  const handleClick = (id: any) => navigate(`details/${id}`);
 
   return (
     <div
@@ -15,7 +15,7 @@ export const Character = (props: Props) => {
     >
       <div className={styles.images}>
         <img
-          src={`${character.thumbnail.path}/portrait_uncanny.${character.thumbnail.extension}`}
+          src={`${character?.thumbnail.path}/portrait_uncanny.${character.thumbnail.extension}`}
           alt="Character Details"
         />
       </div>
@@ -29,13 +29,10 @@ export const Character = (props: Props) => {
 interface Props {
   character: {
     name: string;
-    id: number;
+    id: any;
     thumbnail: {
       path: string;
       extension: string;
-    };
-    series: {
-      available: string;
     };
   };
 }
