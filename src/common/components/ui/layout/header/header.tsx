@@ -10,8 +10,10 @@ export const Header = (props: Props) => {
     <div className={classNames(className, styles.container)}>
       <ul>
         <li>
-          <Link to={"https://www.marvel.com"} target="blank">
+          <Link to="/">
+            {/* <Link to={"https://www.marvel.com"} target="blank"> */}
             <img alt="" src={Marvel} />
+            {/* </Link> */}
           </Link>
         </li>
         <li>

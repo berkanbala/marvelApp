@@ -1,12 +1,12 @@
+import { useGetMarvelDetails } from "common/hooks/useGetMarvelDetails";
 import { useParams } from "react-router-dom";
 import styles from "./characterDetails.module.scss";
-import { useGetMarvelDetails } from "common/hooks/useGetMarvelDetails";
 
 export const CharacterDetails = () => {
   const { id } = useParams();
 
   const { characterDetails, characterDetailsLoading, characterDetailsError } =
-    useGetMarvelDetails(id ?? "");
+    useGetMarvelDetails(id!);
 
   if (characterDetailsLoading) return <div>failed to load</div>;
   if (characterDetailsError) return <div>loading...</div>;
@@ -28,7 +28,12 @@ export const CharacterDetails = () => {
           <h2>Stories-{characterDetails?.stories?.available}</h2>
           <h2>Events-{characterDetails?.events?.available}</h2>
         </div>
-        <p>{characterDetails?.description}</p>
+        <p>
+          {/* {characterDetails?.description} */}
+          {characterDetails?.description !== ""
+            ? characterDetails?.description
+            : "No brief description available for this character. "}
+        </p>
       </div>
     </div>
   );
