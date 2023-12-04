@@ -6,11 +6,6 @@
   overflow: hidden;
   cursor: pointer;
 
-  // &:last-child {
-  //   margin-bottom: 30px;
-  //   display: inline-flex;
-  // }
-
   .images {
     overflow: hidden;
     display: flex;
@@ -36,15 +31,11 @@
       font-size: 16px;
       padding: 4px;
     }
-    // .subheading {
-    // }
   }
 }
 
 @media (max-width: 1810px) {
   .container {
-    // min-width: 400px;
-    // max-width: 100px;
     width: 250px;
     margin-bottom: 30px;
     display: inline-flex;
@@ -68,7 +59,6 @@
 @media (max-width: 800px) {
   .container {
     min-width: 100px;
-    // width: 300px;
     margin-bottom: 30px;
     display: inline-flex;
     .image {
@@ -85,9 +75,5 @@
       margin-bottom: 30px;
       display: inline-flex;
     }
-
-    // .image {
-    //   width: 150px;
-    // }
   }
 }

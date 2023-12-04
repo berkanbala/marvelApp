@@ -14,6 +14,9 @@ export const CharacterDetails = () => {
   console.log(characterDetails);
   return (
     <div className={styles.container}>
+      <div className={styles.content}>
+        <h1>{characterDetails?.name}</h1>
+      </div>
       <div className={styles.images}>
         <img
           src={`${characterDetails?.thumbnail?.path}.${characterDetails?.thumbnail?.extension}`}
@@ -21,19 +24,21 @@ export const CharacterDetails = () => {
         />
       </div>
       <div className={styles.details}>
-        <h2>{characterDetails?.name}</h2>
         <div className={styles.title}>
-          <h2>Comics-{characterDetails?.comics?.available}</h2>
-          <h2>Series-{characterDetails?.series?.available}</h2>
-          <h2>Stories-{characterDetails?.stories?.available}</h2>
-          <h2>Events-{characterDetails?.events?.available}</h2>
+          <h2>Comics</h2>
+          <p>{characterDetails?.comics?.available}</p>
+          <h2>Series</h2>
+          <p>{characterDetails?.series?.available}</p>
+          <h2>Stories</h2>
+          <p>{characterDetails?.stories?.available}</p>
+          <h2>Events</h2>
+          <p>{characterDetails?.events?.available}</p>
         </div>
-        <p>
-          {/* {characterDetails?.description} */}
+        <div className={styles.description}>
           {characterDetails?.description !== ""
             ? characterDetails?.description
             : "No brief description available for this character. "}
-        </p>
+        </div>
       </div>
     </div>
   );
