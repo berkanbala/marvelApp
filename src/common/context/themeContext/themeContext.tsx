@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
-import "../../index.css";
+import styles from "./themeContext.module.scss";
+import classNames from "classnames";
 
 const ThemeContext = createContext({} as any);
 export const useThemeContext = () => useContext(ThemeContext);
@@ -12,7 +13,7 @@ export const ThemeContextProvider = ({ children }: Props) => {
 
   return (
     <ThemeContext.Provider value={contextValue}>
-      <div className={theme === true ? "darkTheme" : "defaultTheme"}>
+      <div className={classNames(styles.container, theme && styles.darkTheme)}>
         {children}
       </div>
     </ThemeContext.Provider>

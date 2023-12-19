@@ -1,6 +1,7 @@
-import { useGetMarvelDetails } from "common/hooks/useGetMarvelDetails";
 import { useParams } from "react-router-dom";
 import styles from "./characterDetails.module.scss";
+import { Loading } from "../../common/components/ui/loading/loading";
+import { useGetMarvelDetails } from "../../common/hooks/useGetMarvelDetails";
 
 export const CharacterDetails = () => {
   const { id } = useParams();
@@ -8,10 +9,10 @@ export const CharacterDetails = () => {
   const { characterDetails, characterDetailsLoading, characterDetailsError } =
     useGetMarvelDetails(id!);
 
-  if (characterDetailsLoading) return <div>failed to load</div>;
-  if (characterDetailsError) return <div>loading...</div>;
+  if (characterDetailsLoading) return <Loading />;
+  if (characterDetailsError)
+    return <div>hata meydana geldi. tekrar deneyiniz</div>;
 
-  console.log(characterDetails);
   return (
     <div className={styles.container}>
       <div className={styles.content}>
