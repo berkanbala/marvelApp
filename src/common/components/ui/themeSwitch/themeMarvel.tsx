@@ -1,5 +1,5 @@
 import styles from "./themeMarvel.module.scss";
-import { useThemeContext } from "../../../context/themeContext";
+import { useThemeContext } from "../../../context/themeContext/themeContext";
 
 export const ThemeMarvel = () => {
   const { changeAppTheme } = useThemeContext();

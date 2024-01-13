@@ -1,11 +1,12 @@
 import { useGetMarvel } from "common/hooks/useGetMarvel";
 import { Character } from "../../custom/components/character/character";
 import styles from "./home.module.scss";
+import { Loading } from "common/components/ui/loading/loading";
 
 export const Home = () => {
   const { characters, charactersLoading, charactersError } = useGetMarvel();
 
-  if (charactersLoading) return <div>loading</div>;
+  if (charactersLoading) return <Loading />;
   if (charactersError) return <div>error</div>;
 
   return (

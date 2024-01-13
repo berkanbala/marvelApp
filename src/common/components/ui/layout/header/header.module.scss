@@ -11,6 +11,15 @@
   position: sticky;
   top: 0;
 
+  .home {
+    display: flex;
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
   ul {
     display: flex;
     align-items: center;

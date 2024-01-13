@@ -13,6 +13,7 @@ export const useGetMarvel = () => {
     revalidateOnFocus: false,
     revalidateOnReconnect: false,
   });
+
   return {
     characters: data?.data || null,
     charactersLoading: isValidating,
