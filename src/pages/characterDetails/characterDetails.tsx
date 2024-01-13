@@ -1,7 +1,11 @@
-import { useGetMarvelDetails } from "common/hooks/useGetMarvelDetails";
 import { useParams } from "react-router-dom";
 import styles from "./characterDetails.module.scss";
+<<<<<<< HEAD
 import { Loading } from "common/components/ui/loading/loading";
+=======
+import { Loading } from "../../common/components/ui/loading/loading";
+import { useGetMarvelDetails } from "../../common/hooks/useGetMarvelDetails";
+>>>>>>> ec06fc633963c974a05f46647448562ed22c95e7
 
 export const CharacterDetails = () => {
   const { id } = useParams();
