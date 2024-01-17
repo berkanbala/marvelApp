@@ -1,0 +1,61 @@
+%boxshadow {
+  box-shadow: 4px 4px 9.6px #a09999, 0 8px 18px #000000;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  text-transform: uppercase;
+  font: 500 44px/1 RobotoCondensed Bold, Trebuchet MS, Helvetica, Arial,
+    sans-serif;
+  transition: font-size 0.2s;
+  // background-size: cover;
+  background-size: contain;
+  background-color: #fff;
+  max-width: calc(100% - 80px);
+  max-width: 100%;
+  justify-content: center;
+
+  .content {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+
+    &::before {
+      z-index: 9;
+      pointer-events: none;
+      // -webkit-user-select: none;
+      user-select: none;
+      // inset: 0;
+
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      // background: url(../../common/media/images/rain.png);
+      background: url(../../common/media/images/rain.gif);
+      // animation: rain 0.2s linear infinite;
+
+      .image {
+        width: 100%;
+        // -webkit-filter: drop-shadow(5px 5px 5px #666666);
+        // filter: drop-shadow(5px 5px 5px #666666);
+      }
+    }
+
+    @keyframes rain {
+      0% {
+        // background-position: 0 0;
+        filter: hue-rotate(150deg);
+        filter: drop-shadow(180deg);
+      }
+      100% {
+        // background-position: 20% 100%;
+        filter: hue-rotate(350deg);
+        filter: drop-shadow(360deg);
+      }
+    }
+  }
+}

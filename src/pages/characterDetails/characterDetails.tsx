@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
-import styles from "./characterDetails.module.scss";
 import { Loading } from "../../common/components/ui/loading/loading";
 import { useGetMarvelDetails } from "../../common/hooks/useGetMarvelDetails";
+import { NotFound } from "../notfound/notFound";
+import styles from "./characterDetails.module.scss";
 
 export const CharacterDetails = () => {
   const { id } = useParams();
@@ -10,8 +11,8 @@ export const CharacterDetails = () => {
     useGetMarvelDetails(id!);
 
   if (characterDetailsLoading) return <Loading />;
-  if (characterDetailsError)
-    return <div>hata meydana geldi. tekrar deneyiniz</div>;
+  if (characterDetailsError) return <NotFound />;
+  // return <div>hata meydana geldi. tekrar deneyiniz</div>;
 
   return (
     <div className={styles.container}>
