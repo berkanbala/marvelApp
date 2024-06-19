@@ -1,4 +1,4 @@
-import { AppContextProvider } from "./common/context/marvelContext/marvelContext";
+import { AppContextProvider } from "./common/context/marvelContext";
 import { AppRoute } from "./routes/appRoute";
 import ReactDOM from "react-dom/client";
 import React from "react";
