@@ -1,4 +1,3 @@
-import { ThemeContextProvider } from "./common/context/themeContext/themeContext";
 import { AppContextProvider } from "./common/context/marvelContext/marvelContext";
 import { AppRoute } from "./routes/appRoute";
 import ReactDOM from "react-dom/client";
@@ -11,10 +10,8 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <ThemeContextProvider>
-      <AppContextProvider>
-        <AppRoute />
-      </AppContextProvider>
-    </ThemeContextProvider>
+    <AppContextProvider>
+      <AppRoute />
+    </AppContextProvider>
   </React.StrictMode>
 );

@@ -1,5 +1,4 @@
 import styles from "./notFound.module.scss";
-// import IronMan from "../../common/media/images/ironman.jpg";
 import IronMan from "../../common/media/images/ironMan.png";
 export const NotFound = () => {
   return (

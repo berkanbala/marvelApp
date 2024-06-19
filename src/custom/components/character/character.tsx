@@ -5,7 +5,7 @@ export const Character = (props: Props) => {
   const navigate = useNavigate();
   const { name, thumbnail, id } = props;
 
-  const handleClick = (id: any) => navigate(`details/${id}`);
+  const handleClick = (id: number) => navigate(`details/${id}`);
 
   return (
     <div className={styles.container} onClick={() => handleClick(id)}>
@@ -24,7 +24,7 @@ export const Character = (props: Props) => {
 
 interface Props {
   name: string;
-  id: any;
+  id: number;
   thumbnail: {
     path: string;
     extension: string;
