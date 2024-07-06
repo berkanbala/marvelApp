@@ -1,8 +1,8 @@
-import { Character } from "../../custom/components/character/character";
 import { useEffect, useState } from "react";
 import { ICharacter } from "common/models/character";
-import styles from "./home.module.scss";
+import { Character } from "../../custom/components/character/character";
 import { Loading } from "../../common/components/ui/loading/loading";
+import styles from "./home.module.scss";
 
 export const Home = () => {
   const [characters, setCharacters] = useState<ICharacter[]>([]);

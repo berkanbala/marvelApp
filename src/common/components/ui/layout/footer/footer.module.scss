@@ -1,15 +1,17 @@
+@import "../../../../assets/styles/variable.scss";
+
 .container {
   align-items: center;
   display: flex;
   justify-content: center;
   padding: 10px;
-  color: #f1f1f1;
+  color: $white;
   bottom: 0;
   width: 100%;
-  background-color: rgb(236, 29, 36);
+  background-color: $red;
   font-family: "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial,
     sans-serif;
-  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+  box-shadow: 0 4px 15px 0 $purple;
   position: sticky;
   z-index: 11;
 }

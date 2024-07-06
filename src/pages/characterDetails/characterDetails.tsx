@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom";
-import styles from "./characterDetails.module.scss";
-import { useEffect, useState } from "react";
 import { ICharacterDetails } from "common/models/characterDetails";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { Loading } from "../../common/components/ui/loading/loading";
+import styles from "./characterDetails.module.scss";
 
 export const CharacterDetails = () => {
   const [characterDetails, setCharacterDetails] = useState<ICharacterDetails>(

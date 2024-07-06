@@ -1,15 +1,17 @@
+@import "../../common/assets/styles/variable.scss";
+
 %boxshadow {
-  box-shadow: 4px 4px 9.6px #a09999, 0 8px 18px #000000;
+  box-shadow: 4px 4px 9.6px $brown, 0 8px 18px $black;
 }
 
 .container {
-  color: black;
+  color: $black;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .content {
-    background-color: rgb(236, 29, 36);
+    background-color: $red;
     margin-bottom: 10px;
     height: auto;
     width: auto;
@@ -19,14 +21,14 @@
 
     @extend %boxshadow;
     h1 {
-      color: black;
+      color: $black;
       border-radius: 9px;
-      background-color: rgb(232, 232, 232);
+      background-color: $white1;
     }
   }
 
   .images {
-    color: black;
+    color: $black;
     overflow: hidden;
     display: flex;
     border-radius: 5px;
@@ -43,8 +45,8 @@
     margin-top: 10px;
     margin-bottom: 25px;
     text-align: center;
-    background-color: rgb(236, 29, 36);
-    color: black;
+    background-color: $red;
+    color: $black;
     padding: 20px 0px;
     overflow: hidden;
     border-radius: 10%;
@@ -65,7 +67,7 @@
       flex-direction: column;
       margin-bottom: 15px;
       color: black;
-      background-color: rgb(232, 232, 232);
+      background-color: $white1;
       margin-right: 40px;
       margin-left: 40px;
       border-radius: 10px;
@@ -77,7 +79,7 @@
       justify-content: center;
       margin-bottom: 13px;
       color: black;
-      background-color: rgb(232, 232, 232);
+      background-color: $white1;
       margin-right: 10px;
       margin-left: -30px;
       border-radius: 10px;
@@ -141,7 +143,7 @@
           justify-content: center;
           margin-bottom: 20px;
           color: black;
-          background-color: rgb(232, 232, 232);
+          background-color: $white1;
           margin-left: 111px;
           border-radius: 10px;
           width: 75px;
